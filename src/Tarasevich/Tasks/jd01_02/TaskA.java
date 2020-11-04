@@ -3,6 +3,9 @@ package Tarasevich.Tasks.jd01_02;
 import java.util.Scanner;
 
 public class TaskA {
+/*
+start second task before practics with massives
+ */
 
     public static void main(String[] args) {
 
@@ -12,7 +15,7 @@ public class TaskA {
             arr[i] = scanner.nextInt();
         }
 
-//        step1(arr);
+        step1(arr);
         step2(arr);
         step3(arr);
 
@@ -34,12 +37,12 @@ public class TaskA {
     }
 
     static void step2(int[] arr) {
-        double Arifmetic= 0 ;
+        double Arifmetic;
         double sum = 0;
-        for (int element:arr){
-            sum = sum+element;
+        for (int element : arr) {
+            sum = sum + element;
         }
-        Arifmetic = sum/arr.length;
+        Arifmetic = sum / arr.length;
 
         for (int element : arr)
             if (element < Arifmetic) {
@@ -50,5 +53,20 @@ public class TaskA {
 
     static void step3(int[] arr) {
 
+        int min = arr[0];
+
+
+        for (int element : arr) {
+            if (min > element) {
+                min = element;
+            }
+
+            for (int i = arr.length - 1; i >= 0; i--) {
+                if (arr[i] == min) {
+                    System.out.println("element number -" + i);
+                }
+
+            }
+        }
     }
 }
